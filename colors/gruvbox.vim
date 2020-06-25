@@ -593,7 +593,7 @@ hi! link VisualNOS Visual
 call s:HL('Search', s:hls_highlight, s:gb.bg0, s:inverse)
 call s:HL('IncSearch', s:hls_cursor, s:gb.bg0, s:inverse)
 
-call s:HL('QuickFixLine', s:gb.bg0, s:gb.yellow, s:bold) 
+call s:HL('QuickFixLine', s:gb.bg0, s:gb.yellow, s:bold)
 
 call s:HL('Underlined', s:gb.blue, s:none, s:underline)
 
@@ -617,7 +617,7 @@ call s:HL('ErrorMsg',   s:gb.bg0, s:gb.red, s:bold)
 " More prompt: -- More --
 hi! link MoreMsg GruvboxYellowBold
 " Current mode message: -- INSERT --
-hi! link ModeMsg GruvboxYellowBold
+hi! link ModeMsg GruvboxBlueBold
 " 'Press enter' prompt and yes/no questions
 hi! link Question GruvboxOrangeBold
 " Warning messages
@@ -633,7 +633,7 @@ call s:HL('LineNr', s:gb.bg4, s:number_column)
 call s:HL('SignColumn', s:none, s:sign_column)
 
 " Line used for closed folds
-call s:HL('Folded', s:gb.gray, s:gb.bg1, s:italic)
+call s:HL('Folded', s:gb.yellow, s:gb.bg1, s:italic)
 " Column where folds are displayed
 call s:HL('FoldColumn', s:gb.gray, s:gb.bg1)
 
@@ -724,9 +724,9 @@ hi! link Typedef GruvboxYellow
 
 if version >= 700
   " Popup menu: normal item
-  call s:HL('Pmenu', s:gb.fg1, s:gb.bg2)
+  call s:HL('Pmenu', s:gb.fg0, s:gb.bg1)
   " Popup menu: selected item
-  call s:HL('PmenuSel', s:gb.bg2, s:gb.blue, s:bold)
+  call s:HL('PmenuSel', s:gb.bg0, s:gb.yellow, s:bold)
   " Popup menu: scrollbar
   call s:HL('PmenuSbar', s:none, s:gb.bg2)
   " Popup menu: scrollbar thumb
@@ -736,14 +736,14 @@ endif
 " }}}
 " Diffs: {{{
 
-call s:HL('DiffDelete', s:gb.red, s:gb.bg0, s:inverse)
-call s:HL('DiffAdd',    s:gb.green, s:gb.bg0, s:inverse)
+call s:HL('DiffDelete', s:gb.red, s:gb.bg1, s:bold)
+call s:HL('DiffAdd',    s:gb.green, s:gb.bg1, s:bold)
 "call s:HL('DiffChange', s:gb.bg0, s:gb.blue)
 "call s:HL('DiffText',   s:gb.bg0, s:gb.yellow)
 
 " Alternative setting
-call s:HL('DiffChange', s:gb.aqua, s:gb.bg0, s:inverse)
-call s:HL('DiffText',   s:gb.yellow, s:gb.bg0, s:inverse)
+call s:HL('DiffChange', s:gb.fg1, s:gb.bg0)
+call s:HL('DiffText',   s:gb.orange, s:gb.bg1, s:bold)
 
 " }}}
 " Spelling: {{{
@@ -1506,7 +1506,7 @@ hi! link haskellAssocType GruvboxAqua
 
 hi! link haskellNumber GruvboxAqua
 hi! link haskellPragma GruvboxRedBold
- 
+
 hi! link haskellTH GruvboxAquaBold
 hi! link haskellForeignKeywords GruvboxGreen
 hi! link haskellKeyword GruvboxRed
@@ -1540,7 +1540,7 @@ hi! link mailHeaderKey GruvBoxBlue
 hi! link mailHeaderEmail GruvBoxBlue
 hi! link mailSubject GruvboxBlue
 
-" mail quoted text 
+" mail quoted text
 hi! link mailQuoted1 GruvBoxAqua
 hi! link mailQuoted2 GruvBoxPurple
 hi! link mailQuoted3 GruvBoxYellow
@@ -1558,10 +1558,10 @@ hi! link mailQuotedExp6 GruvBoxOrange
 " I did not discover yet for what this is used
 " hi! link mailVerbatim GruvBoxRed
 
-" mail signature 
-hi! link mailSignature GruvBoxFg 
+" mail signature
+hi! link mailSignature GruvBoxFg
 
-" mail url and emails 
+" mail url and emails
 hi! link mailURL GruvBoxOrange
 hi! link mailEmail GruvBoxOrange
 
